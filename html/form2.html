@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>MRM-Processing</title>
+</head>
+<body>
+    <main>
+        <h2>MRM Processing</h2>
+        <form class="form">
+            <div class="row input">
+                Upload sample run(s) file(s)
+                <input type="file" id="samples" accept=".mzML" multiple>
+                <button id="upload-samples" class="rounded-btn">&uarr;</button>
+                <span id="samples-info"></span>
+            </div>
+            <div class="row input">
+                Upload blank run file
+                <input type="file" id="blank" accept=".mzML">
+                <button id="upload-blank" class="rounded-btn">&uarr;</button>
+                <span id="blank-info"></span>
+            </div>
+            <div class="row input">
+                Sample / Blank intensity ratio threshold: 
+                <input type="text" id="threshold" value="1.30">
+            </div>
+            <div class="row">
+                <button id="start" class="input"> Start </button>
+                <a id="next" href="../index.html">Back &larr;</a>
+            </div>
+        </form>
+        <div class="processing hidden">
+            <div class="row">Log:</div>
+            <div class="row" id="logger"> </div>
+            <div class="row"> Processing<span id="indicator"></span> </div>
+            <div class="row"> <a id="log" href=""> Log &darr;</a> </div>
+        </div>
+        <form class="output hidden">
+            <div class="row"> Outputs: <select id="outputs"></select> </div>
+            <div class="row"> <a id="download" href=""> Output &darr;</a> </div>
+        </form>
+        <div id="error" class="hidden">
+            <div id="close"> &times;</div>
+            <div>Error</div>
+            <div id="info">Msg</div>
+        </div>
+    </main>
+</body>
+
+
+
+</html>

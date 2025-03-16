@@ -1,0 +1,119 @@
+ body,
+ button,
+ input,
+ select {
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-size: 1rem;
+ }
+
+ a {
+     text-decoration: none;
+ }
+
+ input[type=file] {
+     display: none;
+ }
+
+ input[type=text] {
+     border: 0;
+     border-bottom: 3px solid black;
+     width: 4ch;
+ }
+
+ select {
+     border-bottom: 3px solid black;
+ }
+
+ body {
+     width: 600px;
+     margin: 30px auto;
+     border: 1px solid black;
+     border-radius: 10px;
+     padding: 20px;
+ }
+
+ form {
+     margin: 0 auto;
+ }
+
+ .hidden {
+     display: none;
+ }
+
+ #logger {
+     border: 1px solid black;
+     height: 100px;
+     overflow: auto;
+     padding: 5px;
+     border-radius: 5px;
+     margin: 5px 0;
+     color: lightslategray;
+ }
+
+ .row {
+     padding: 10px 0;
+     margin: 10px 0;
+ }
+
+ #error {
+     padding: 10px;
+     margin: 30px 0;
+     color: red;
+     font-weight: bold;
+     border: 1px solid red;
+     border-radius: 5px;
+     background-color: lightpink;
+     line-height: 2rem;
+ }
+
+ #close {
+     font-size: 1.5rem;
+     cursor: default;
+ }
+
+ #close:hover {
+     color: lightcoral
+ }
+
+ #close {
+     float: right;
+ }
+
+ #info {
+     font-weight: normal;
+ }
+
+ button,
+ a {
+     padding: 10px;
+     border: 3px solid black;
+     border-radius: 5px;
+     background-color: black;
+     color: rgb(249, 248, 248);
+     font-weight: bold;
+ }
+
+ button:hover,
+ a:hover {
+     background-color: rgb(249, 248, 248);
+     color: black;
+ }
+
+ .rounded-btn {
+     width: 30px;
+     height: 30px;
+     border-radius: 100%;
+     padding: 0px;
+     background-color: black;
+     color: rgb(249, 248, 248);
+     text-align: center;
+ }
+
+ .rounded-btn:hover {
+     background-color: rgb(249, 248, 248);
+     color: black;
+ }
+
+ .processing {
+     padding-bottom: 20px;
+ }
