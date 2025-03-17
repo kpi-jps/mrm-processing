@@ -11,7 +11,7 @@ window.addEventListener("load", (e) => {
     const next = document.getElementById("next")
 
     //populating the html select element (id = method)
-    for (const m of constants.methods) {
+    for (const m in constants.methods) {
         const o = document.createElement("option")
         o.value = m
         o.innerText = m

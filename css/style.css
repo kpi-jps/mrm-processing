@@ -40,7 +40,7 @@
      display: none;
  }
 
- #logger {
+ #log {
      border: 1px solid black;
      height: 100px;
      overflow: auto;
@@ -116,4 +116,8 @@
 
  .processing {
      padding-bottom: 20px;
+ }
+
+ .file-info, #indicator {
+    color: lightseagreen;
  }
