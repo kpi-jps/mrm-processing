@@ -10,6 +10,14 @@ function logging(htmlEl, msg) {
 }
 
 /**
+ * Clears the log
+ * @param {HTMLElement} htmlEl Html element used as log container
+ */
+function clearLog() {
+    htmlEl.innerText = ""
+}
+
+/**
  * Starts the processing indicator while processing mzML files
  * @param {HTMLElement} htmlEl The html element used as processing indicator 
  * @param {()} callback The callback function executed when processing indicator is started 

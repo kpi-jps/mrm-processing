@@ -52,6 +52,7 @@ window.addEventListener("load", (e) => {
         const processing = document.getElementById("processing")
         const interval = startProcessingIndicator(indicator, () => document.getElementById("cover").classList.remove("hidden"))
         const outputs = document.getElementById("outputs")
+        clearLog(log)
         logging(log, `Start processing using method ${method}.`)
         processing.classList.remove("hidden")
         output.classList.remove("hidden")
