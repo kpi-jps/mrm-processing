@@ -65,24 +65,26 @@ window.addEventListener("load", (e) => {
 
         switch (method) {
             case Object.keys(constants.methods)[0]:
-                const mrms = []
-                let content = ""
-                for (const run in data) {
-                    let index = 0
-                    for (const mrm in data[run]) {
-                        if (!mrms.includes(mrm)) {
-                            logging(log, `Selecting mrm ${mrm}.`)
-                            mrms.push(mrm)
-                            content += index === 0 ? mrm : `,${mrm}`
-                            index++
-                            continue
+                (function () {
+                    const mrms = []
+                    let content = ""
+                    for (const run in data) {
+                        let index = 0
+                        for (const mrm in data[run]) {
+                            if (!mrms.includes(mrm)) {
+                                logging(log, `Selecting mrm ${mrm}.`)
+                                mrms.push(mrm)
+                                content += index === 0 ? mrm : `,${mrm}`
+                                index++
+                                continue
+                            }
                         }
                     }
-                }
-                const link = URL.createObjectURL(new Blob([content], {type : "text/csv"}))
-                logging(log, `It was grouped ${mrms.length} mrm's.`)
-                populateOutputs(outputs, [{value : link, text : method}], () => download.setAttribute("href", outputs.value))
-                download.setAttribute("href", outputs.value)
+                    const link = URL.createObjectURL(new Blob([content], { type: "text/csv" }))
+                    logging(log, `It was grouped ${mrms.length} mrm's.`)
+                    populateOutputs(outputs, [{ value: link, text: method }], () => download.setAttribute("href", outputs.value))
+                    download.setAttribute("href", outputs.value)
+                })()
                 break
 
             default:
