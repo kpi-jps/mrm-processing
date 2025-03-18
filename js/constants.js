@@ -3,5 +3,5 @@ const constants = Object.freeze({
         "output_all_mrm": "/html/form1.html",
         "filter_mrm_by_threshold": "/html/form2.html",
         "filter_mrm_by_lib": "/html/form3.html"
-    }
+    },
 })

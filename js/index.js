@@ -6,10 +6,7 @@ window.addEventListener("load", (e) => {
         document.body.innerHTML = `<h3>${msg}</h3>`
         return
     }
-
     
-
-
     const method = document.getElementById("method")
     const next = document.getElementById("next")
 
@@ -38,4 +35,3 @@ window.addEventListener("load", (e) => {
     //setting the initial href value for "next" anchor
     next.setAttribute("href", constants.methods[method.value])
 })
-
