@@ -13,7 +13,7 @@ function logging(htmlEl, msg) {
  * Clears the log
  * @param {HTMLElement} htmlEl Html element used as log container
  */
-function clearLog() {
+function clearLog(htmlEl) {
     htmlEl.innerText = ""
 }
 
